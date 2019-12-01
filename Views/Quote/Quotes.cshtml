@@ -1,0 +1,9 @@
+@model Quote
+<h1 class="text-center">Here are the awesome quotes!</h1>
+
+@foreach (var quote in @ViewBag.Quotes)
+{
+    <p>"@quote["Content"]"</p>
+    <p>-@quote["Name"] at @quote["Created_At"].ToString("hh:mmtt MMMM dd, yyyy")</p>
+    <hr>
+}
